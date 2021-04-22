@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
     content:{
         width:'100%',
         marginTop:30,
+        marginBottom:70,
     },
     title:{
         width:'100%',
