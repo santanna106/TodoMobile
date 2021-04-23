@@ -5,11 +5,11 @@ import add from '../../assets/add.png';
 import confirm from '../../assets/confirm.png';
 
 
-export default function Footer({icon}) {
+export default function Footer({icon,newTask} ) {
  return (
  
    <View style={styles.container}>
-     <TouchableOpacity style={styles.button}>
+     <TouchableOpacity style={styles.button} onPress={newTask}>
        <Image source={icon === 'add' ? add : confirm} style={styles.Image}/>
      </TouchableOpacity>
       <Text style={styles.text}>

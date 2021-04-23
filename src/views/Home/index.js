@@ -7,7 +7,7 @@ import Footer from '../../components/Footer';
 import TaskCard from '../../components/TaskCard';
 
 
-export default function Home() {
+export default function Home({navigation}) {
   const [filtroAtivo,setFiltroAtivo] = useState('all');
   const [loading,setLoading] = useState(false);
   const [lateCount,setLateCount] = useState();
@@ -36,6 +36,10 @@ export default function Home() {
 
   }
 
+  function addTask(){
+    navigation.navigate('Task');
+  }
+
   useEffect(() => {
     loadTasks();
     lateVerify();
@@ -45,7 +49,7 @@ export default function Home() {
  return (
     <View style={styles.container}>
         <StatusBar translucent backgroundColor={styles.statusBar.backgroundColor}  />
-        <Header showNotification={true} showBack={false} pressNotification={notification} late={lateCount}/>
+        <Header showNotification={true} showBack={false} pressNotification={notification} late={lateCount} />
         <View style={styles.filter}>
           <TouchableOpacity onPress={() => setFiltroAtivo('all')}>
             <Text style={filtroAtivo ==='all' ? styles.filterTextActivity : styles.filterTextInactivity}>
@@ -95,7 +99,7 @@ export default function Home() {
     
         
             
-        <Footer style={styles.footer} icon={'add'}/>
+        <Footer style={styles.footer} icon={'add'} newTask={addTask}/>
     </View>
   );
 }

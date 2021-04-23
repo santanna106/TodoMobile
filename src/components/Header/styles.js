@@ -42,7 +42,8 @@ const styles = StyleSheet.create({
     },
     leftIconImage :{
         width:30,
-        height:30
+        height:30,
+       
     }
 
 })

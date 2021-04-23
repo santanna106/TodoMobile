@@ -20,12 +20,16 @@ import {
 
  import DateTimeInput from '../../components/DateTimeInput/index.android';
 
-export default function Task() {
+export default function Task({navigation}) {
+
+ function backClick(){
+     navigation.navigate('Home');
+ }
 
  const [done,setDone] = useState(false);
  return (
    <KeyboardAvoidingView behavior='padding' style={styles.container}>
-    <Header showBack={true} />
+    <Header showBack={true} backClick={backClick} />
     <ScrollView style={{width:'100%'}}>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{marginVertical:10}}>
             {

@@ -1,10 +1,11 @@
 import React from 'react';
-import Home from './src/views/Home';
-import Task from './src/views/Task';
+
+import AppStack from './src/routes/app.routes';
+
 
 export default function App() {
   return (
-    <Task />
+    <AppStack />
   );
 }
 
