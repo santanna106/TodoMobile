@@ -18,6 +18,8 @@ import {
  import Header from '../../components/Header';
  import Footer from '../../components/Footer';
 
+ import DateTimeInput from '../../components/DateTimeInput/index.android';
+
 export default function Task() {
 
  const [done,setDone] = useState(false);
@@ -45,6 +47,9 @@ export default function Task() {
         <TextInput style={styles.inputArea} maxLength={200}
          multiline={true}
          placeholder={'... detalhes da atividade'} />
+
+         <DateTimeInput type={'date'} />
+         <DateTimeInput type={'time'} />
 
          <View style={styles.inLine}>
              <View style={styles.inputLine}>

@@ -51,7 +51,8 @@ const styles = StyleSheet.create({
         width:'100%',
         alignItems:'center',
         justifyContent:'space-between',
-        padding:10
+        padding:10,
+        marginBottom:70
     },
     inputLine:{
         flexDirection:'row',
